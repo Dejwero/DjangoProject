@@ -27,3 +27,4 @@ class Like(models.Model):
 
 class Comment(models.Model):
     text = models.TextField(max_length=500)
+    # vfasivy
