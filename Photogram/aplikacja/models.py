@@ -20,4 +20,4 @@ class Like(models.Model):
     image = models.ForeignKey(Image, on_delete=models.CASCADE)
 
 class Comment(models.Model):
-    text = models.TextField(max_length= 1000)
+    text = models.TextField(max_length= 2137)
