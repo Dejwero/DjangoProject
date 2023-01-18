@@ -10,7 +10,7 @@ class Profile(models.Model):
     user_name = models.TextField(max_length = 50)
     age = models.IntegerField()
     bio = models.TextField(max_length= 200)
-    profile_img = models.ImageField()
+    # profile_img = models.ImageField()
     status = models.CharField(choices=PROFILE_STATUS, max_length=30, default='unfollowed')
 
 
