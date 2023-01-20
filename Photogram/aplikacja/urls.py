@@ -8,3 +8,7 @@ urlpatterns = [
     path('signup/', views.signup, name='sign-up'),
     path('profile/', views.profile, name='profile')
 ]
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
+
+urlpatterns += staticfiles_urlpatterns()
