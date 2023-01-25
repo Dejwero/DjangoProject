@@ -1,6 +1,7 @@
+<html>
+<body>
 {% extends "base.html" %}
 {% block content %}
-    <h1>Mój profil</h1>
     {% for post in posts %}
         <h2>{{post.nickname}}</h2>
         <p>{{post.photo}}</p>
@@ -8,3 +9,6 @@
         <p>Added {{post.date}}</p>
     {% endfor %}
 {% endblock content %}
+</body>
+</html>
+

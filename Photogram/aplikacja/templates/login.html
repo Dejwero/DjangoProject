@@ -5,9 +5,7 @@
     <input type="text">
     <p>Hasło</p>
     <input type="password">
-    <p>
-        Nie masz konta?
-    </p>
-    <a href="{% url 'sign-up' %}">Zarejestruj się</a>
-    <a href="{% url 'photogram' %}"><button>Wróć do strony głównej</button></a>
+    <p>Nie masz konta?</p>
+    <a href="{% url 'sign-up' %}"><button type="button" class="btn btn-light btn-lg">Zarejestruj się</button></a>
+    <a href="{% url 'photogram' %}"><button type="button" class="btn btn-light btn-lg">Wróć do strony głównej</button></a>
 {% endblock content %}
