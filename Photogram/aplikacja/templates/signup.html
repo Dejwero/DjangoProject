@@ -1,18 +1,16 @@
 {% extends "base-before-log.html" %}
 {% block content %}
     <h1>Załóż konto na PhotoGram</h1>
-    <p>E-mail</p>
-    <input type="email">
-    <p>Nazwa użytkownika</p>
-    <input type="text">
-    <p>Hasło</p>
-    <input type="password">
-    <p>Powtórz hasło</p>
-    <input type="password">
-    <p>Zaznacz swoją płeć</p>
-    <input type="radio" name="plec" value="k"> kobieta
-    <input type="radio" name="plec" value="m"> mężczyzna
-    <input type="radio" name="plec" value="n"> nieokreślona
-<p><button type="button" class="btn btn-light btn-lg">Zarejestruj się</button>
-    <a href="{% url 'photogram' %}"><button type="button" class="btn btn-light btn-lg">Wróć do strony głównej</button></a></p>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <p><input type="text" name="username" placeholder="Nazwa użytkownika"></p>
+        <p><input type="email" name="email" placeholder="E-mail"></p>
+        <p><input type="password" name="password" placeholder="Hasło"></p>
+        <p><input type="password" name="password2" placeholder="Powtórz hasło"></p>
+        <p><button type="submit" class="btn btn-light btn-lg">Zarejestruj się</button></p>
+        <p>Masz już konto? <a href="{% url 'photogram' %}">Zaloguj się</a></p>
+        
+    </form>
+    
+    
 {% endblock content %}
